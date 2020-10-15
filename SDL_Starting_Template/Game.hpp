@@ -2,6 +2,8 @@
 #include<SDL.h>
 #include <SDL_image.h>
 #include <iostream>
+#include "Map.hpp"
+
 
 class Game {
 public:
@@ -18,9 +20,10 @@ public:
 
 	bool running() { return isRunning; }
 
+	static SDL_Renderer* renderer;
+
 private:
 	bool isRunning;
 	SDL_Window* window;
-	SDL_Renderer* renderer;
 	int count = 0;
 };

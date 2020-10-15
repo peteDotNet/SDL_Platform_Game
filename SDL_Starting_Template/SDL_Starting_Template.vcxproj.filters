@@ -27,6 +27,9 @@
     <ClCompile Include="GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Documents\C++\SDL2-2.0.12\lib\x64\SDL2.dll">
@@ -40,10 +43,13 @@
     <ClInclude Include="Game.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TextureManager .hpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameObject.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager .hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -52,6 +58,15 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\hero2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\dirt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\grass.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\water.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

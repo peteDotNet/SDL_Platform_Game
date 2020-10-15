@@ -4,6 +4,9 @@
 
 GameObject* player;
 GameObject* player1;
+GameObject* water;
+SDL_Renderer* Game::renderer = nullptr;
+Map* map;
 
 
 Game::Game() {
@@ -43,8 +46,10 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	}
 
 	
-	player = new GameObject("assets/hero.png", renderer, 0, 0);
-	player1 = new GameObject("assets/hero2.png", renderer, 32, 32);
+	player = new GameObject("assets/hero.png", 0, 0);
+	player1 = new GameObject("assets/hero2.png", 32, 32);
+	water = new GameObject("assets/water.png", 32, 32);
+	map = new Map();
 }
 
 void Game::handleEvents() 
@@ -70,6 +75,8 @@ void Game::render()
 {
 	SDL_RenderClear(renderer);
 
+
+	map->DrawMap();
 	player->Render();
 	player1->Render();
 
