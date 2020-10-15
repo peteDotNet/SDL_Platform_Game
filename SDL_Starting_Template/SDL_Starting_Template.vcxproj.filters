@@ -26,10 +26,18 @@
     <None Include="..\..\..\..\Documents\C++\SDL2-2.0.12\lib\x64\SDL2.dll">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="SDL2_image.dll">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\hero.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

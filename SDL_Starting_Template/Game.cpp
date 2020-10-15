@@ -1,6 +1,7 @@
 #include "Game.hpp"
 
 
+
 Game::Game() {
 
 }
@@ -36,6 +37,16 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	{
 		isRunning = false;
 	}
+
+	
+	SDL_Surface* tmpSurface = IMG_Load("assets/hero.png");
+
+	if (tmpSurface == NULL)
+		std::cout << "Failed to load image" << std::endl;
+
+	playerTex = SDL_CreateTextureFromSurface(renderer, tmpSurface);
+	SDL_FreeSurface(tmpSurface);
+
 }
 
 void Game::handleEvents() 
@@ -53,13 +64,23 @@ void Game::handleEvents()
 void Game::update() 
 {
 	count++;
-	std::cout << count << std::endl;
+
+	destR.h = 64;
+	destR.w = 32;
+	destR.x = count;
+
+	count++;
+
+	
+	//std::cout << count << std::endl;
 }
 
 void Game::render()
 {
 	SDL_RenderClear(renderer);
-	//Add things to render
+
+	SDL_RenderCopy(renderer, playerTex, NULL, &destR);
+
 	SDL_RenderPresent(renderer);
 }
 
