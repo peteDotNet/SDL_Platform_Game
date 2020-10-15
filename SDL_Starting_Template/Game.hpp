@@ -8,8 +8,7 @@ public:
 	Game();
 	~Game();
 
-	SDL_Texture* playerTex;
-	SDL_Rect srcR, destR;
+	
 
 	void init(const char* title, int xpos, int ypos,int width, int height, bool fullscreen);
 	void handleEvents();
