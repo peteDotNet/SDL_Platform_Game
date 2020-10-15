@@ -1,4 +1,5 @@
 #include "Game.hpp"
+#include "TextureManager .hpp"
 
 
 
@@ -39,13 +40,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	}
 
 	
-	SDL_Surface* tmpSurface = IMG_Load("assets/hero.png");
-
-	if (tmpSurface == NULL)
-		std::cout << "Failed to load image" << std::endl;
-
-	playerTex = SDL_CreateTextureFromSurface(renderer, tmpSurface);
-	SDL_FreeSurface(tmpSurface);
+	playerTex = TextureManager::LoadTexture("assets/hero.png", renderer);
 
 }
 

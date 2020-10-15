@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Documents\C++\SDL2-2.0.12\lib\x64\SDL2.dll" />
@@ -28,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="TextureManager .hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\hero.png" />
